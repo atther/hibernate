@@ -19,6 +19,6 @@ public class User {
     Long id;
     String name;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    @JoinColumn(name = "sadak_id", referencedColumnName = "id")
     Address address;
 }

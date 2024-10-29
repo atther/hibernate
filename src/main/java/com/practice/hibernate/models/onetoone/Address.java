@@ -21,7 +21,13 @@ public class Address {
     Long id;
     String street;
     String city;
+
+    //this is bidirectional mapping
+    //Now we don’t have a column referencing to User table in our Address table so what is this piece of code?
+    //This is where Hibernate comes into helping us, mappedBy = “address” tells Hibernate to look for a field named "address"
+    //in the User class and link that particular instance to the current user object.
     @JsonIgnore
     @OneToOne(mappedBy = "address")
+//    @JoinColumn(name = "user_id", referencedColumnName = "id")
     User user;
 }
