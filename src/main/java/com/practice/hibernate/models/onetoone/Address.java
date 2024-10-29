@@ -28,6 +28,6 @@ public class Address {
     //in the User class and link that particular instance to the current user object.
     @JsonIgnore
     @OneToOne(mappedBy = "address")
-//    @JoinColumn(name = "user_id", referencedColumnName = "id")
+ //   @JoinColumn(name = "user_id", referencedColumnName = "id")
     User user;
 }
